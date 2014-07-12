@@ -1,0 +1,11 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Sparkissimo</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+  </head>
+  <body>
+    <div id="content"></div>
+    <script src="/assets/<%= env.production ? 'index.min.js' : 'index.js' %>"></script>
+  </body>
+</html>

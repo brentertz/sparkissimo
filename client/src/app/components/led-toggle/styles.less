@@ -1,0 +1,30 @@
+.led-toggle {
+  cursor: pointer;
+  display: table;
+  height: 100%;
+  width: 100%;
+
+  .status {
+    background: #ccc;
+    color: #666;
+    font-size: 10vmin;
+    transition: all 1s ease;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+
+    &.on, &.off {
+      font-size: 50vmin;
+    }
+
+    &.on {
+      background: #ffffcc;
+      color: #ff9933;
+    }
+
+    &.off {
+      background: #333;
+      color: #000;
+    }
+  }
+}

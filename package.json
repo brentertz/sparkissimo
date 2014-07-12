@@ -1,0 +1,64 @@
+{
+  "name": "sparkissimo",
+  "version": "0.0.0",
+  "description": "A kickstart for developing web applications with the Spark Core",
+  "homepage": "https://github.com/brentertz/sparkissimo",
+  "author": "Brent Ertz <brent.ertz@gmail.com> (http://brentertz.com/)",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/brentertz/sparkissimo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brentertz/sparkissimo/issues"
+  },
+  "license": "MIT",
+  "private": true,
+  "keywords": [
+    "spark",
+    "arduino",
+    "johnny-five",
+    "firmata",
+    "node",
+    "express",
+    "react",
+    "socket.io",
+    "browserify"
+  ],
+  "scripts": {
+    "preinstall": "(npm list -g grunt-cli || npm install -g grunt-cli) && (npm list -g nodemon || npm install -g nodemon) && (npm list -g node-inspector || npm install -g node-inspector)",
+    "start": "NODE_CONFIG_DIR=./server/config node ./server/app.js",
+    "start:debug": "DEBUG=* NODE_CONFIG_DIR=./server/config nodemon --debug-brk ./server/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "~4.6.0",
+    "morgan": "~1.1.1",
+    "config": "~0.4.36",
+    "socket.io": "~1.0.6",
+    "johnny-five": "~0.7.55",
+    "spark-io": "~0.5.1"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "load-grunt-tasks": "~0.6.0",
+    "grunt-browserify": "~2.0.8",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-less": "~0.11.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-concurrent": "~0.5.0",
+    "grunt-nodemon": "~0.2.1",
+    "grunt-jsxhint": "0.0.2",
+    "reactify": "~0.13.1",
+    "envify": "~1.2.1",
+    "jquery": "~2.1.1",
+    "react": "~0.10.0",
+    "socket.io-client": "~1.0.6"
+  },
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  }
+}
