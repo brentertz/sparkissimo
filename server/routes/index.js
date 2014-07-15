@@ -1,3 +1,3 @@
-module.exports = function(sio, config) {
+module.exports = function(app, sio, config) {
   require('./spark')(sio, config);
 };

@@ -14,7 +14,7 @@ app.set('port', config.port);
 app.use(express.static(config.staticBase));
 app.use(logger(config.loggerOptions));
 
-require('./routes')(sio, config);
+require('./routes')(app, sio, config);
 
 if (!module.parent) {
   var port = app.get('port');
