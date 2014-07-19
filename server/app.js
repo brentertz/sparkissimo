@@ -14,7 +14,9 @@ app.set('port', config.port);
 app.use(express.static(config.staticBase));
 app.use(logger(config.loggerOptions));
 
-require('./routes')(app, sio, config);
+require('./lib/hue')(config, function(err, hue) {
+  require('./lib/spark')(sio, hue, config);
+});
 
 if (!module.parent) {
   var port = app.get('port');

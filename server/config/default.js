@@ -6,5 +6,8 @@ module.exports = {
   spark: {
     apiToken: 'SECRET',
     deviceId: 'SECRET'
+  },
+  hue: {
+    username: 'SECRET'
   }
 };

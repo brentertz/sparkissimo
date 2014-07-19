@@ -1,5 +1,4 @@
-.led-toggle {
-  cursor: pointer;
+.ocupado {
   display: table;
   height: 100%;
   width: 100%;
@@ -17,14 +16,14 @@
       font-size: 50vmin;
     }
 
-    &.on {
-      background: #ffffcc;
-      color: #ff9933;
+    &.ocupado {
+      background: red;
+      color: #000;
     }
 
-    &.off {
-      background: #333;
-      color: #000;
+    &.desocupado {
+      background: green;
+      color: #fff;
     }
   }
 }
